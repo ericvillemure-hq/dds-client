@@ -11,16 +11,17 @@ pool:
 
 
 steps:
-- task: AzureKeyVault@2
-  inputs:
-    azureSubscription: 'sc-spxffadodev01'
-    KeyVaultName: 'kvxffadodev01'
 - task: Go@0
   displayName: 'go build'
   inputs:
     command: build
 
-- task: CmdLine@1
+- task: AzureKeyVault@1
+  inputs:
+    azureSubscription: 'sc-spxffadodev01'
+    KeyVaultName: 'kvxffadodev01'
+
+- task: CmdLine@2
   displayName: 'apps:exists'
   inputs:
     filename: 'dds-client'
