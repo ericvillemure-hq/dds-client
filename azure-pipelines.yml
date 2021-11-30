@@ -15,10 +15,7 @@ steps:
   inputs:
     command: build
 - task: CmdLine@1
+  displayName: 'apps:exists'
   inputs:
-    script: |
-      echo Write your commands here
-      
-      echo Hello world
-
-      dds-client apps:exists --name dopsa
+    filename: 'dds-client'
+    arguments: 'apps:exists --name dopsa'
