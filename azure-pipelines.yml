@@ -14,4 +14,11 @@ steps:
   displayName: 'go build'
   inputs:
     command: build
+- task: CmdLine@1
+  inputs:
+    script: |
+      echo Write your commands here
+      
+      echo Hello world
 
+      dds-client apps:exists --name dopsa
