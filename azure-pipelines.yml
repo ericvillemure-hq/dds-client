@@ -14,7 +14,7 @@ steps:
 - task: AzureKeyVault@2
   inputs:
     azureSubscription: 'sc-spxffadodev01'
-    KeyVaultName: 'kvxffappdev01'
+    KeyVaultName: 'kvxffadodev01'
 - task: Go@0
   displayName: 'go build'
   inputs:
