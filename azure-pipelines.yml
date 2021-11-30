@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  name: Azure - Private Windows 2019 - Canada Central - XFA - Mise en place
 
 
 steps:
